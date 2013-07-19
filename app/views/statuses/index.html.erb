@@ -1,0 +1,23 @@
+<div class="page-header">
+  <h1>Status Avenue</h1>
+</div>
+
+<%= link_to "Post a New Status", new_status_path, class: "btn btn-info" %>
+
+  <% @statuses.each do |status| %>  
+  <div class="Status">
+    <strong><%= status.country %></strong>
+    <p><%= status.content %></p>
+    <div class="meta"> 
+      <%= link_to time_ago_in_words(status.created_at) + " ago", status %> |
+      <span class="admin">
+        <%= link_to "Edit", edit_status_path(status) %> |
+        <%= link_to "Delete", status, method: :delete, data: { confirm: "Are you Sure About Deleting This Status?" } %> |
+        <%= link_to "Proceed", edit_status_path(status) %>
+      </span>  
+    </div>
+
+  </div>
+
+  <%end%>
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Thingy</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>	
+	<div class="navbar navbar-fixed-top">
+	  <div class="navbar-inner">
+	    <a class="brand" href="#">T.Town</a>
+	    <ul class="nav">
+	      <li class="active"><a href="#">ThingyTown</a></li>
+	      <li><a href="#">Link100</a></li>
+	      <li><a href="#">Link200</a></li>
+	    </ul>
+	  </div>
+	</div>
+
+	<div class="container">
+		<%= yield %>
+		<em> FOOTER </embed>
+
+	</div>
+
+
+
+</body>
+</html>
