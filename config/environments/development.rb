@@ -26,4 +26,8 @@ Thingy::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # Treehouse config recommendation from initial "devise" install. (Connects Login/Logout abilities)(Simiulated host :3000)
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
 end
